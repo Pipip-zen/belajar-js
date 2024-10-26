@@ -1,3 +1,4 @@
+// Video 1
 // Object Literal
 // PROBLEM: tidak efektif untuk object yang banyak.
 // let mahasiswa = {
@@ -99,3 +100,61 @@
 
 // let rafif = new Mahasiswa('Rafif Nuha', 10);
 
+
+// Video 2
+// console.log(nama);
+// var nama ='Rafif';
+
+// creation phase pada Global Context
+// nama var = undfined
+// nama function = fn()
+// hoisting
+// windows = global object
+// this = window
+
+// execution phase
+
+// console.log(sayHello());
+
+// var nama = 'Rafif';
+// var umur = 33;
+
+
+// function sayHello() {
+//     return (`Halo, nama saya ${nama}, saya ${umur} tahun`);
+// }
+
+// function membuat Local Execution Context
+// terdapat creation dan execution
+// window
+// arguments
+// hoisting
+
+var nama = 'Rafif';
+var username = '@zein_dakara';
+
+function cetakURL() {
+    // console.log(arguments);
+    var instagramURL = 'http://instagram.com/';
+    return instagramURL + username;
+}
+
+console.log(cetakURL(username))
+
+// function a() {
+//     console.log('ini a');
+
+//     function b() {
+//         console.log('ini b');
+
+//         function c() {
+//             console.log('ini c');
+//         }
+
+//         c();
+//     }
+
+//     b();
+// }
+
+// a();
