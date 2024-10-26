@@ -130,16 +130,16 @@
 // arguments
 // hoisting
 
-var nama = 'Rafif';
-var username = '@zein_dakara';
+// var nama = 'Rafif';
+// var username = '@zein_dakara';
 
-function cetakURL() {
-    // console.log(arguments);
-    var instagramURL = 'http://instagram.com/';
-    return instagramURL + username;
-}
+// function cetakURL() {
+//     // console.log(arguments);
+//     var instagramURL = 'http://instagram.com/';
+//     return instagramURL + username;
+// }
 
-console.log(cetakURL(username))
+// console.log(cetakURL(username))
 
 // function a() {
 //     console.log('ini a');
@@ -158,3 +158,49 @@ console.log(cetakURL(username))
 // }
 
 // a();
+
+// Closure
+
+// function init() {
+//     let nama = 'Rafif';
+//     function tampilNama() {
+//         console.log(nama);
+//     }
+//     tampilNama();
+// }
+// init();
+
+
+// function init() {
+//     // let nama = 'Rafif';
+//     return function (nama) {
+//         console.log(nama);
+//     }
+// }
+// let panggilNama = init();
+// panggilNama('Rafif');
+// panggilNama('Nuha');
+
+// function ucapkanSalam(waktu) {
+//     return function(nama) {
+//         console.log(`Halo ${nama}, selamat ${waktu}!`);
+//     }
+// }
+
+// let selamatPagi = ucapkanSalam('Pagi');
+// let selamatSiang = ucapkanSalam('Siang');
+// let selamatMalam = ucapkanSalam('Malam');
+
+// console.dir(selamatMalam);
+
+
+let add = (function() {
+    let counter = 0;
+    return function() {
+        return ++counter;
+    }
+})();
+
+console.log(add());
+console.log(add());
+console.log(add());
