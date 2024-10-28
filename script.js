@@ -193,14 +193,54 @@
 
 // console.dir(selamatMalam);
 
+// let add = (function() {
+//     let counter = 0;
+//     return function() {
+//         return ++counter;
+//     }
+// })();
 
-let add = (function() {
-    let counter = 0;
-    return function() {
-        return ++counter;
-    }
-})();
+// console.log(add());
+// console.log(add());
+// console.log(add());
 
-console.log(add());
-console.log(add());
-console.log(add());
+// Function Expression
+// const tampilNama = function (nama) {
+//     return `Halo, ${nama}`;
+// }
+
+// console.log(tampilNama('Rafif'))
+
+// Arrow Function
+// const tampilNama = (nama) => {
+//     return `Halo, ${nama}`;
+// }
+
+// console.log(tampilNama('Rafif Nuha'))
+
+// const tampilNama = (nama, waktu) => {
+//     return `Selamat ${waktu}, ${nama}`;
+// }
+
+// console.log(tampilNama('Rafif Nuha', 'Pagi'))
+
+// Implisit Return
+// const tampilNama = nama => `Halo, ${nama}`;
+
+// console.log(tampilNama('Rafif Nuha'))
+
+// const tampilNama = () => `Hello World!`;
+// console.log(tampilNama());
+
+let mahasiswa = ['Rafif', 'Nuha', 'Daniswara'];
+
+// let jumlahHuruf = mahasiswa.map(function (nama) {
+//     return nama.length;
+// });
+// console.log(jumlahHuruf);
+ 
+// let jumlahHuruf = mahasiswa.map( nama => nama.length);
+// console.log(jumlahHuruf);
+
+let jumlahHuruf = mahasiswa.map ( nama =>({ nama: nama, jmlHuruf: nama.length}));
+console.table(jumlahHuruf);
