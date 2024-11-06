@@ -232,7 +232,7 @@
 // const tampilNama = () => `Hello World!`;
 // console.log(tampilNama());
 
-let mahasiswa = ['Rafif', 'Nuha', 'Daniswara'];
+// let mahasiswa = ['Rafif', 'Nuha', 'Daniswara'];
 
 // let jumlahHuruf = mahasiswa.map(function (nama) {
 //     return nama.length;
@@ -242,5 +242,5 @@ let mahasiswa = ['Rafif', 'Nuha', 'Daniswara'];
 // let jumlahHuruf = mahasiswa.map( nama => nama.length);
 // console.log(jumlahHuruf);
 
-let jumlahHuruf = mahasiswa.map ( nama =>({ nama: nama, jmlHuruf: nama.length}));
-console.table(jumlahHuruf);
+// let jumlahHuruf = mahasiswa.map ( nama =>({ nama: nama, jmlHuruf: nama.length}));
+// console.table(jumlahHuruf);
