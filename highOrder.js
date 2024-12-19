@@ -26,7 +26,7 @@ const angka = [-1, 8, 9, 1, 4, -5, -4, 3, 2, 9];
 // Cari angka > 5
 // kalikan 3
 // jumlahkan
-const hasil = angka.filter(a => a > 5) 
-    .map(a => a * 3)
-    .reduce((acc, cur) => acc + cur); 
-console.log(hasil);
+// const hasil = angka.filter(a => a > 5) 
+//     .map(a => a * 3)
+//     .reduce((acc, cur) => acc + cur); 
+// console.log(hasil);
