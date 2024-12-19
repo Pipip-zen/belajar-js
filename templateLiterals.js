@@ -12,17 +12,86 @@
 // const x = 10;
 // console.log(`${(x % 2 == 0) ? 'genap' : 'ganjil'}`);
 
-// HTML Fragments
+// 1. HTML Fragments
+// const mhs = {
+//     nama: ' Rafif Nuha',
+//     umur: 19,
+//     nrp: '5324600006',
+//     email: 'rafif.nuha@gmail.com',
+// };
+ 
+// const el = `<div class="mhs">
+//     <h2>${mhs.nama}</h2>
+//     <span class="nrp">${mhs.nrp}</span>
+// </div>`;
+
+// console.log(el);
+
+// 2. Looping
+// const mhs = [
+//     {
+//         nama: 'Rafif Nuha',
+//         email: 'rafif.nuha@gmail.com',
+//     },
+//     {
+//         nama: 'Doddy',
+//         email: 'doddy@gmail.com',
+//     },
+//     {
+//         nama: 'Erik',
+//         email: 'erik@gmail.com',
+//     },
+// ];
+
+// const el = `<div class="mhs">
+//     ${mhs.map(m => `<ul>
+//         <li>${m.nama}</li>
+//         <li>${m.email}</li>
+//         </ul>`).join('')}
+// </div>`
+
+//3. Conditionals
+// ternary
+// const lagu = {
+//     judul: 'Kau Adalah',
+//     penyanyi: 'Isyana Sarasvati',
+//     feat: 'Rayi Putra'
+// }
+
+// const el = `<div class="lagu">
+//     <ul>
+//         <li>${lagu.penyanyi}</li>
+//         <li>${lagu.judul} ${lagu.feat ? `(feat . ${lagu.feat})` : ''}</li>
+//     </ul>
+// </div>`
+
+// 4. Nested
+// HTML Fragments bersarang
+
 const mhs = {
-    nama: ' Rafif Nuha',
-    umur: 19,
-    nrp: '5324600006',
-    email: 'rafif.nuha@gmail.com',
+    nama: 'Rafif Nuha',
+    semester: 5,
+    matakuliah: [
+        'Rekayasa Web', 
+        'Analisis Sistem Informasi',
+        'Pemrograman Sistem Interaktif',
+        'Perancangan Sistem Berorientasi Object'
+    ]
 };
+
+function cetakMataKuliah(matakuliah) {
+    return `
+    <ol>
+        ${matakuliah.map(mk => `<li>${mk}</li>`).join('')}
+    </ol>
+    `;
+}
 
 const el = `<div class="mhs">
     <h2>${mhs.nama}</h2>
-    <span class="nrp">${mhs.nrp}</span>
-</div>`;
-
-console.log(el);
+    <span class="semester">Semester: ${mhs.semester}</span>
+    <h4>Mata Kuliah :</h4>
+    ${cetakMataKuliah(mhs.matakuliah)}
+</div>`
+ 
+document.body.innerHTML = el;
