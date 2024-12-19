@@ -68,30 +68,64 @@
 // 4. Nested
 // HTML Fragments bersarang
 
-const mhs = {
-    nama: 'Rafif Nuha',
-    semester: 5,
-    matakuliah: [
-        'Rekayasa Web', 
-        'Analisis Sistem Informasi',
-        'Pemrograman Sistem Interaktif',
-        'Perancangan Sistem Berorientasi Object'
-    ]
-};
+// const mhs = {
+//     nama: 'Rafif Nuha',
+//     semester: 5,
+//     matakuliah: [
+//         'Rekayasa Web', 
+//         'Analisis Sistem Informasi',
+//         'Pemrograman Sistem Interaktif',
+//         'Perancangan Sistem Berorientasi Object'
+//     ]
+// };
 
-function cetakMataKuliah(matakuliah) {
-    return `
-    <ol>
-        ${matakuliah.map(mk => `<li>${mk}</li>`).join('')}
-    </ol>
-    `;
+// function cetakMataKuliah(matakuliah) {
+//     return `
+//     <ol>
+//         ${matakuliah.map(mk => `<li>${mk}</li>`).join('')}
+//     </ol>
+//     `;
+// }
+
+// const el = `<div class="mhs">
+//     <h2>${mhs.nama}</h2>
+//     <span class="semester">Semester:${mhs.semester}</span>
+//     <h4>Mata Kuliah :</h4>
+//     ${cetakMataKuliah(mhs.matakuliah)}
+// </div>`
+ 
+// document.body.innerHTML = el;
+
+// Taggged Templates
+
+// const nama = 'Rafif Nuha';
+// const umur = 19;
+
+// function coba(strings, ...values) {
+//     // let result = '';
+//     // strings.forEach((str, i) => {
+//     //     result += `${str}${values[i] || ''}`;
+//     // });
+//     // return result;
+
+//     return strings.reduce((result, str, i) => `${result}${str}${values[i] || ''}
+//     `, '')
+// }
+
+// const str = coba`Halo, nama saya ${nama}, saya ${umur} tahun.`;
+// console.log(str);
+
+// Highlight
+const nama = 'Rafif Nuha';
+const umur = 19;
+const email = 'rafif.nuha@gmail.com'
+
+function highlight(strings, ...values) {
+    return strings.reduce((result, str, i) => `${result}${str}<span class="hl">${values[i] || ''}</span>
+    `, '')
 }
 
-const el = `<div class="mhs">
-    <h2>${mhs.nama}</h2>
-    <span class="semester">Semester: ${mhs.semester}</span>
-    <h4>Mata Kuliah :</h4>
-    ${cetakMataKuliah(mhs.matakuliah)}
-</div>`
- 
-document.body.innerHTML = el;
+const str = highlight`Halo, nama saya ${nama}, saya ${umur} tahun,
+dan email saya adalah: ${email}`;
+
+document.body.innerHTML = str;
